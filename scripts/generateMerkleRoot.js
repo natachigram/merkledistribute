@@ -8,7 +8,7 @@ async function generateMerkleTree() {
   const csvData = fs.readFileSync('scripts/gen_files/add.csv', 'utf8');
   const rows = csvData.split('\n').map((row) => row.split(','));
 
-  // Prepare the data for the Merkle tree
+  // data for the Merkle tree
   const elements = rows.map((row) => {
     const address = row[0].trim(); // Assuming address is in the first column
     const amount = row[1].trim(); // Assuming amount is in the second column
